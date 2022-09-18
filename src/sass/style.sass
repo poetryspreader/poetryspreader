@@ -1,99 +1,32 @@
-@mixin box
-    height: 46px
-    width: 155px
-    cursor: pointer
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap')
 
-@mixin greyOutline
-    cursor: pointer
-    padding: 5px 10px
-    border-radius: 4px
-    
-    
-*, *::before, *::after 
-    box-sizing: border-box
+// base
+@import "base/mixins"
+// blocks
+@import "blocks/logo"
+@import "blocks/header"
+@import "blocks/rocket"
 
-body,h1,h2,h3,h4,h5,h6,p
-    margin: 0
-    padding: 0
 
 .container 
     margin: 0 auto
     width: 100%
     max-width: 1800px
 
-
-.logo
-    display: flex
-    align-items: center
-    justify-content: center
-    &_line
-        display: block
-        left: 0
-        height: 1px
-        width: 200px
-        background-color: black
-        margin: 0 auto
-    &_box
-        background-color: #A52A2A
-        margin: 10px 0
-        @include box
-    &_text_inner
-        display: flex
-        justify-content: center
-        align-items: center
-    &_text
-        line-height: 1.2
-        font-size: 35px
-        font-family: 'Six Caps', sans-serif
-
-.header
-    width: 100%
-    padding: 10px
-    background-color: white
-    color: black  
-    &_inner
-        display: flex
-        justify-content: space-between
-        align-items: center 
-        font-family: 'Zen Kurenaido', sans-serif
-        font-weight: 400
-        font-size: 20px  
-    &_nav
-        display: flex
-        list-style-type: none
-    &_language
-        @include greyOutline
-    &_language:hover
-        background-color: rgb(245, 245, 245) 
-    &_text  
-        @include greyOutline
-        margin-right: 30px
-        font-family: 'Zen Kurenaido', sans-serif
-        font-weight: 400
-        font-size: 20px  
-        &:hover
-            background-color: rgb(245, 245, 245)        
-        &_last-child
-            padding-left: none  
-    &_login
-        @include greyOutline
-    &_login:hover
-        background-color: rgb(245, 245, 245) 
-
-
 .wrap_1 
     width: 100%
     background-color: #F5DEB3
     &_inner
-        padding: 60px 0
+        padding: 30px 0
         display: flex
         flex-wrap: wrap
         width: 100%
     &_pic_item 
         width: 33%
-        margin: 0 3px
-img 
-    width: 100%
+        margin: 1px 1px
+    img 
+        width: 100%
 
 .wrap_2 
     background-color: white
@@ -128,7 +61,3 @@ img
                 font-weight: 700 
                 font-size: 30px
                 letter-spacing: 4px
-            
-
-
-

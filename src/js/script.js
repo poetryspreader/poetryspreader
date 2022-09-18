@@ -12,3 +12,10 @@ function changeColor () {
       i = 0;
     }
   }
+
+  import { Application } from '@splinetool/runtime';
+
+  const canvas = document.getElementById('canvas3d');
+  const app = new Application(canvas);
+  app.load('https://prod.spline.design/y9Ktlm0mFFlnJM0D/scene.splinecode');
+  
