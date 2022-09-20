@@ -1,13 +1,26 @@
 .logo
-    padding:10px 0 0
-    display: flex
-    justify-content: center
+    position: relative
+    padding: 13px 5px 0
+    height: 75px
+    &__buttons
+        display: flex
+        justify-content: space-between
+        text-align: center
+        width: 100%
     &__box
-        height:46px
-        background-color:#97a848
-        width:155px
-        cursor: pointer
-        transition: 0.5s
+        position: absolute
+        white-space: nowrap
+        left: 50%
+        transform: translateX(-50%)
+        height: 45px
+        width: 155px
+        transition: 0.7s
+        border-radius: 2px
+        background-color: #256bb5
+        &-heightDown
+            height: 5px
+        &-widthHover
+            width: 120px
     &__barcode-wrapper
         display: block
         text-align: center
@@ -16,5 +29,33 @@
     &__barcode
         position: relative
         top:-9px
-        margin:0 -3px
-        
+        margin: 0 -3px
+        color: white
+        transition: 0.7s
+        &-colorSwipe
+            color: black
+        &-widthHover
+            margin: 0 -1px
+    &__nav-login
+        font-family: "Zen Kurenaido",sans-serif
+        font-size: 20px
+        text-decoration: none
+        color:#000
+        cursor: pointer
+        padding: 5px 10px
+        border-radius: 4px
+        &:hover
+            color:#000
+            background-color:#f5f5f5
+    &__nav-language
+        font-family: "Zen Kurenaido",sans-serif
+        font-size: 20px
+        text-decoration: none
+        color:#000
+        cursor: pointer
+        padding: 5px 10px
+        border-radius: 4px
+        &:hover
+            color:#000
+            background-color:#f5f5f5
+

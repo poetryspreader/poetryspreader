@@ -1,8 +1,7 @@
 // fonts
 @import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap')
-
 // base
-// @import "base/mixins"
+@import "base/media"
 // blocks
 @import "blocks/logo"
 @import "blocks/header"
@@ -10,9 +9,23 @@
 @import "blocks/subpromo"
 @import "blocks/carousel"
 
-
 .container 
     margin: 0 auto
     width: 100%
     max-width: 1800px
 
+@keyframes inflate-left
+    0%
+        transform: scale(1)
+    50%
+        transform: scale(0.99)
+    100%
+        animation-delay: 10s
+        
+@keyframes inflate-right
+    0%
+        transform: scale(1)
+    50%
+        transform: scale(0.99)
+    100%
+        animation-delay: 5s

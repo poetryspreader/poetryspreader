@@ -1,13 +1,23 @@
 .promo
     width: 100%
-    background-color: wheat
+    background-color: #ffffff
+    padding: 0 10px
     &__inner
         display: flex
         flex-wrap: wrap
-        justify-content: center
         width: 100%
-    &__item
-        width: 33%
-        margin: 1px 1px
+    &__left
+        width: 30%   
         img
+            display: block
+            margin: 0 auto
+            border-radius: 3px
             width: 100%
+            animation: inflate-left 4s linear infinite
+    &__right
+        width: 30%
+        img
+            animation: inflate-right 4s linear infinite
+            width: 100%
+            border-radius: 3px
+
