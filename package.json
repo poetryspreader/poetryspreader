@@ -24,5 +24,6 @@
     "last 1 version",
     "> 1%",
     "IE 11"
-  ]
+  ],
+  "emulator.emulatorPath": "C:/UsersMe/AppData/Local/Android/Sdk/emulator"
 }
