@@ -72,7 +72,17 @@ function widthHover() {
             small.classList.remove('logo__barcode-widthHover');
         });
     });
-};
+}
 widthHover();
 
-//
+// subpromo sliding
+const subpromoText = document.querySelector('.subpromo__text'),
+    subpromoInside = document.querySelector('.subpromo__inside'),
+    subpromoItem = document.querySelector('.subpromo__item');
+
+function subPromoSliders() {
+    subpromoItem.addEventListener("click", function() {
+        subpromoText.classList.toggle('subpromo__text-active');
+        subpromoInside.classList.toggle('subpromo__inside-active');
+    });
+}
