@@ -1,28 +1,76 @@
-const colors = ["#FFA07A", "#3CB371", "#008B8B", "#6A5ACD", "#c786d3"],
-      logoBox = document.querySelector(".logo__box"),
-      logoText = document.querySelectorAll('.logo__barcode');
+window.addEventListener("DOMContentLoaded", function() {
 
-var i = 0;
+    const colors = ["#FFA07A", "#3CB371", "#008B8B", "#6A5ACD", "#c786d3"],
+    logoBox = document.querySelector(".logo__box"),
+    logoText = document.querySelectorAll('.logo__barcode');
 
-// logo color changing 
-function colorChange() {
+    var i = 0;
+
+    // LOGO
+
+    // logo color changing 
+    function colorChange() {
     logoBox.style.backgroundColor = colors[i];
     i++;
     if (i >= colors.length) i = 0;
     setTimeout(colorChange, 2000);
-}
-colorChange();
+    }
+    colorChange();
 
-// change randomly and directly rgb numbers
-// function test() {
-//     let color = [255,255,255],
-//         randomColor = Math.floor(Math.random() * 3),
-//         randomDirection = Math.floor(Math.random() * 2),
-//         step = 0;
-//         if (true) {
-//             for(step=0;step < 5; step++) {
+    // logo box animation
+    function logoBoxAnimation() {
+        setTimeout(function() {
+            logoBox.classList.add('logo__box-heightDown');
+            logoText.forEach((item) => {
+                item.classList.add('logo__barcode-colorSwipe');
+            });
+        },0);
+        setTimeout(function() {
+            logoBox.classList.remove('logo__box-heightDown');
+            logoText.forEach((item) => {
+                item.classList.remove('logo__barcode-colorSwipe');
+            });
+        },5000);
+        setTimeout(logoBoxAnimation,10000);
+        }
+        logoBoxAnimation();
+    
+    
+        // logo width hover
+        function widthHover() {
+        logoBox.classList.remove('logo__barcode-widthHover');
+        logoBox.addEventListener('mouseover', function(){
+            logoText.forEach((large) => {
+                large.classList.add('logo__barcode-widthHover');
+            });
+        });
+        logoBox.addEventListener('mouseout', function(){
+            logoText.forEach((small) => {
+                small.classList.remove('logo__barcode-widthHover');
+            });
+        });
+        }
+        widthHover();
+    
+        $(".buttons__unit").each(function(i) {
+            $(this).on('click', function(e) {
+                e.preventDefault();
+                $(".buttons__slider_1").eq(i).toggleClass('buttons__slider_1-active');
+                $(".buttons__slider_2").eq(i).toggleClass('buttons__slider_2-active');
+            });
+        });
 
-//             }
+
+    // change randomly and directly rgb numbers
+    // function test() {
+    //     let color = [255,255,255],
+    //         randomColor = Math.floor(Math.random() * 3),
+    //         randomDirection = Math.floor(Math.random() * 2),
+    //         step = 0;
+    //         if (true) {
+    //             for(step=0;step < 5; step++) {
+
+    //             }
 
         // } else {
             // downStreak();
@@ -35,54 +83,15 @@ colorChange();
             //     setTimeout(downStreak,2000);
             // }
         // }
-//         setTimeout(test, 2000);
-//         }
-//     }
-// test();
-
-// logo box animation
-function logoBoxAnimation() {
-    setTimeout(function() {
-        logoBox.classList.add('logo__box-heightDown');
-        logoText.forEach((item) => {
-            item.classList.add('logo__barcode-colorSwipe');
-        });
-    },0);
-    setTimeout(function() {
-        logoBox.classList.remove('logo__box-heightDown');
-        logoText.forEach((item) => {
-            item.classList.remove('logo__barcode-colorSwipe');
-        });
-    },5000);
-    setTimeout(logoBoxAnimation,10000);
-}
-logoBoxAnimation();
+    //         setTimeout(test, 2000);
+    //         }
+    //     }
+    // test();
 
 
-// logo width hover
-function widthHover() {
-    logoBox.classList.remove('logo__barcode-widthHover');
-    logoBox.addEventListener('mouseover', function(){
-        logoText.forEach((large) => {
-            large.classList.add('logo__barcode-widthHover');
-        });
-    });
-    logoBox.addEventListener('mouseout', function(){
-        logoText.forEach((small) => {
-            small.classList.remove('logo__barcode-widthHover');
-        });
-    });
-}
-widthHover();
+        
+            
+});
+    
 
-// subpromo sliding
-const subpromoText = document.querySelector('.subpromo__text'),
-    subpromoInside = document.querySelector('.subpromo__inside'),
-    subpromoItem = document.querySelector('.subpromo__item');
 
-function subPromoSliders() {
-    subpromoItem.addEventListener("click", function() {
-        subpromoText.classList.toggle('subpromo__text-active');
-        subpromoInside.classList.toggle('subpromo__inside-active');
-    });
-}
