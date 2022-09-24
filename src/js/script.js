@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     var i = 0;
 
-    // LOGO
+    // * LOGO
 
     // logo color changing 
     function colorChange() {
@@ -52,14 +52,6 @@ window.addEventListener("DOMContentLoaded", function() {
         }
         widthHover();
     
-        $(".buttons__unit").each(function(i) {
-            $(this).on('click', function(e) {
-                e.preventDefault();
-                $(".buttons__slider_1").eq(i).toggleClass('buttons__slider_1-active');
-                $(".buttons__slider_2").eq(i).toggleClass('buttons__slider_2-active');
-            });
-        });
-
 
     // change randomly and directly rgb numbers
     // function test() {
@@ -88,9 +80,52 @@ window.addEventListener("DOMContentLoaded", function() {
     //     }
     // test();
 
+    // NAV
 
+    // * NAV TOGGLER
+
+    // $(".promo__item").each(function() {
+    //     $(this).fadeOut();
+    // });
+    function promoToggler(item) {
+        // $(".header__nav-item").each(function(i) {
+        //     $(this).on('click', function(e) {
+        //         e.preventDefault();
+        //         $(this).siblings().removeClass("header__nav-item-active");
+        //         $(this).addClass("header__nav-item-active");
+        //         $(".promo__item").eq(e).siblings().fadeOut();
+        //         $(".promo__item").eq(e).fadeIn();
+        //     });
+        // });
+
+        $(item).on("click", function(e) {
+            console.log(`${item}-active`);
+            $(this).siblings().data().fadeOut();
+            // e.preventDefault();
+            // item.siblings().removeClass('{"data-modal"}');
+            // item.removeClass('{"data-modal"}');
+        });
+
+
+    }
+    promoToggler('[data-modal=promo__new]');
+
+
+
+
+
+    // BUTTONS
+
+    $(".buttons__unit").each(function(i) {
+        $(this).on('click', function(e) {
+            e.preventDefault();
+            $(".buttons__slider_1").eq(i).toggleClass('buttons__slider_1-active');
+            $(".buttons__slider_2").eq(i).toggleClass('buttons__slider_2-active');
+        });
+    });
         
-            
+    
+
 });
     
 

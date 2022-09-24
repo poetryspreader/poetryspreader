@@ -44,7 +44,7 @@
     <div class="header__nav-scroll-container">
         <div class="header__nav-wrapper">
             <menu class="header__nav">
-                <li class="header__nav-item header__nav-item-active"><a class="header__nav-link">Новое</a></li>
+                <li data-modal="promo__new" class="header__nav-item header__nav-item-active"><a class="header__nav-link">Новое</a></li>
                 <li class="header__nav-item"><a class="header__nav-link">Сайты</a></li>
                 <li class="header__nav-item"><a class="header__nav-link">Фото</a></li>
                 <li class="header__nav-item"><a class="header__nav-link">Контакты</a></li>
@@ -54,44 +54,65 @@
 </section>
 
 <section class="promo">
-        <div class="promo__inner">
-
-            <div class="promo__item">
-                <img src="img/spotify.jpg" alt="spotify">
-            </div>
-
-            <div class="promo__item">
-                <div class="proslider first">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner active">
-                          <div class="carousel-item active">
-                            <img src="img/1.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="img/5.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="img/3.jpg" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button> -->
-                        
-                      </div>
-                </div>
-            </div>
-
-            <div class="promo__item">
-                <img class="promo__left-img"src="img/lying.jpg" alt="spotify">
-            </div>
-            
+        <!-- ? NEW -->
+    <div data-modal="promo__new" class="promo__new-active">
+        <div class="promo__new-item">
+            <img src="img/spotify.jpg" alt="spotify">
         </div>
+        <div class="promo__new-item">
+            <div class="proslider first">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner active">
+                        <div class="carousel-item active">
+                        <img src="img/1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="img/5.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="img/3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button> -->
+                    
+                    </div>
+            </div>
+        </div>
+        <div class="promo__new-item">
+            <img class="promo__left-img"src="img/lying.jpg" alt="spotify">
+        </div>
+    </div>
+
+    <!-- ? PHOTOS -->
+    <div class="promo__photos"> 
+        <div class="promo__photos-item">
+            <img src="img/1.jpg" class="" alt="...">
+        </div>
+        <div class="promo__photos-item">
+            <img src="img/1.jpg" class="" alt="...">
+        </div>
+        <div class="promo__photos-item">
+            <img src="img/1.jpg" class="" alt="...">
+        </div>
+        <div class="promo__photos-item">
+            <img src="img/1.jpg" class="" alt="...">
+        </div>
+        <div class="promo__photos-item">
+            <img src="img/1.jpg" class="" alt="...">
+        </div>
+        <div class="promo__photos-item">
+            <img src="img/1.jpg" class="" alt="...">
+        </div>
+    </div>
+
+
 </section>
 
 <section class="buttons">
