@@ -8,16 +8,16 @@ window.addEventListener("DOMContentLoaded", function() {
 
     // * LOGO
 
-    // logo color changing 
+    // ? logo color changing 
     function colorChange() {
-    logoBox.style.backgroundColor = colors[i];
-    i++;
-    if (i >= colors.length) i = 0;
-    setTimeout(colorChange, 2000);
+        logoBox.style.backgroundColor = colors[i];
+        i++;
+        if (i >= colors.length) i = 0;
+        setTimeout(colorChange, 2000);
     }
     colorChange();
 
-    // logo box animation
+    // ? logo box animation
     function logoBoxAnimation() {
         setTimeout(function() {
             logoBox.classList.add('logo__box-heightDown');
@@ -36,8 +36,8 @@ window.addEventListener("DOMContentLoaded", function() {
         logoBoxAnimation();
     
     
-        // logo width hover
-        function widthHover() {
+    // ? logo width hover
+    function widthHover() {
         logoBox.classList.remove('logo__barcode-widthHover');
         logoBox.addEventListener('mouseover', function(){
             logoText.forEach((large) => {
@@ -49,8 +49,8 @@ window.addEventListener("DOMContentLoaded", function() {
                 small.classList.remove('logo__barcode-widthHover');
             });
         });
-        }
-        widthHover();
+    }
+    widthHover();
     
 
     // change randomly and directly rgb numbers
@@ -80,41 +80,24 @@ window.addEventListener("DOMContentLoaded", function() {
     //     }
     // test();
 
-    // NAV
 
     // * NAV TOGGLER
 
-    // $(".promo__item").each(function() {
-    //     $(this).fadeOut();
-    // });
-    function promoToggler(item) {
-        // $(".header__nav-item").each(function(i) {
-        //     $(this).on('click', function(e) {
-        //         e.preventDefault();
-        //         $(this).siblings().removeClass("header__nav-item-active");
-        //         $(this).addClass("header__nav-item-active");
-        //         $(".promo__item").eq(e).siblings().fadeOut();
-        //         $(".promo__item").eq(e).fadeIn();
-        //     });
-        // });
-
+    function promoToggler(item, i) {
         $(item).on("click", function(e) {
-            console.log(`${item}-active`);
-            $(this).siblings().data().fadeOut();
-            // e.preventDefault();
-            // item.siblings().removeClass('{"data-modal"}');
-            // item.removeClass('{"data-modal"}');
+            $(this).siblings().removeClass('header__nav-item-active');
+            $('.promo').children().removeClass("promo__modal-active");
+            $('.header__nav').children().eq(i).addClass('header__nav-item-active');
+            $('.promo').children().eq(i).addClass('promo__modal-active');
         });
-
-
     }
-    promoToggler('[data-modal=promo__new]');
+    promoToggler('[data-modal=promo__new]', 0);
+    promoToggler('[data-modal=promo__photos]', 1);
+    promoToggler('[data-modal=promo__web]', 2);
+    promoToggler('[data-modal=promo__contacts]', 3);
 
 
-
-
-
-    // BUTTONS
+    // * BUTTONS
 
     $(".buttons__unit").each(function(i) {
         $(this).on('click', function(e) {
