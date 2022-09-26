@@ -45,9 +45,9 @@
         <div class="header__nav-wrapper">
             <menu class="header__nav">
                 <li data-modal="promo__new" class="header__nav-item header__nav-item-active"><a class="header__nav-link">Новое</a></li>
-                <li class="header__nav-item"><a class="header__nav-link">Сайты</a></li>
-                <li class="header__nav-item"><a class="header__nav-link">Фото</a></li>
-                <li class="header__nav-item"><a class="header__nav-link">Контакты</a></li>
+                <li data-modal="promo__photos" class="header__nav-item"><a class="header__nav-link">Фото</a></li>
+                <li data-modal="promo__web" class="header__nav-item"><a class="header__nav-link">Сайты</a></li>
+                <li data-modal="promo__forms" class="header__nav-item"><a class="header__nav-link">Cвязь</a></li>
             </menu>
         </div>
     </div>
@@ -55,11 +55,16 @@
 
 <section class="promo">
     <!-- ? NEW -->
+<<<<<<< HEAD
     <div data-modal="promo__new" class="promo__new-active">
         <div class="promo__new-item">
+=======
+    <div  class="promo__modal promo__modal-active">
+        <div class="promo__modal-item">
+>>>>>>> 8f06e76e5f2f3a670f3dddd6efc9aa838fbf09fa
             <img src="img/spotify.jpg" alt="spotify">
         </div>
-        <div class="promo__new-item">
+        <div class="promo__modal-item">
             <div class="proslider first">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner active">
@@ -80,44 +85,89 @@
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
+<<<<<<< HEAD
                     </button> -->            
+=======
+                    </button> -->
+    
+>>>>>>> 8f06e76e5f2f3a670f3dddd6efc9aa838fbf09fa
                 </div>
             </div>
         </div>
-        <div class="promo__new-item">
+        <div class="promo__modal-item">
             <img class="promo__left-img"src="img/lying.jpg" alt="spotify">
         </div>
     </div>
 
     <!-- ? PHOTOS -->
-    <div class="promo__photos"> 
-        <div class="promo__photos-item">
+    <div class="promo__modal"> 
+        <div class="promo__modal-item">
             <img src="img/1.jpg" class="" alt="...">
         </div>
-        <div class="promo__photos-item">
+        <div class="promo__modal-item">
             <img src="img/1.jpg" class="" alt="...">
         </div>
-        <div class="promo__photos-item">
+        <div class="promo__modal-item">
             <img src="img/1.jpg" class="" alt="...">
         </div>
-        <div class="promo__photos-item">
+        <div class="promo__modal-item">
             <img src="img/1.jpg" class="" alt="...">
         </div>
-        <div class="promo__photos-item">
+        <div class="promo__modal-item">
             <img src="img/1.jpg" class="" alt="...">
         </div>
-        <div class="promo__photos-item">
+        <div class="promo__modal-item">
             <img src="img/1.jpg" class="" alt="...">
         </div>
     </div>
 
+    <!-- ? WEB -->
+    <div class="promo__modal">
+        <div class="web">
+            <div class="web__disclaimer">
+                упс... пока нихуя нету
+            </div>
+        </div>
+    </div>
+    
+    <!-- ? FORM -> EMAIL -->
+    <div class="promo__modal">
+        <div class="form">
+            <span class="form__tilda">~</span>
+            <h1 class="form__title">Отправка данных на почту:</h1>
+            <div class="form__item">
+                <label for="forName">Имя*:</label>
+                <input type="text" name="name" class="form__input">
+            </div>            
+            <div class="forms__item">
+                <label for="formMessage" class="form__label">
+                    Сообщение:
+                </label>
+                <textarea name="massage" id="forMessage" class="form__input"></textarea>
+            </div>
+            <div class="form__button">отправить</div>
+        </div>
+    </div>
 
 </section>
 
-<section class="buttons">
+
+<!-- <section class="buttons">
     <div class="container">
-        <!-- * -->
         <div class="buttons__inner">
+
+            <div class="buttons__unit">
+                <img class="buttons__image" src="/icons/quotes.png" alt="">
+                <div class="buttons__slider_wrapper">
+                    <div class="buttons__slider_1 buttons__slider_1-active">
+                        ыт
+                    </div>
+                    <div class="buttons__slider_2">
+                        ты пидор
+                    </div>
+                </div>
+            </div>
+
             <div class="buttons__unit">
                 <img class="buttons__image" src="/icons/quotes.png" alt="">
                 <div class="buttons__slider_wrapper">
@@ -129,37 +179,21 @@
                     </div>
                 </div>
             </div>
-
-        <!-- * -->
-            <div class="buttons__unit">
-                <img class="buttons__image" src="/icons/quotes.png" alt="">
-                <div class="buttons__slider_wrapper">
-                    <div class="buttons__slider_1 buttons__slider_1-active">
-                        ыть
-                    </div>
-                    <div class="buttons__slider_2">
-                        ты пидор
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
         </div>
     </div>
-</section>
+</section> -->
+
+
+
+
+
+
+
+
+
 <!-- <div class="rocket">
     <iframe src='https://my.spline.design/untitled-2dc979d00886d3fcfcd5a35f4649f3bd/' frameborder='0' width='100%' height='100%'></iframe>
 </div> -->
-
-
-
-
-
-
 <script src="js/libraries/jquery-3.6.1.js"></script>
 
 <script src="https://unpkg.com/js-polyfills@0.x.x/keyboard.js"></script>
