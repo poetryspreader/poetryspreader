@@ -14,7 +14,7 @@ task('server', function() {
         server: {
             baseDir: "src"
         },
-        // browser: 'chrome',
+        browser: 'chrome',
     });
 });
 

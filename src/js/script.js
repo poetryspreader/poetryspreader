@@ -99,10 +99,11 @@ window.addEventListener("DOMContentLoaded", function() {
         // });
 
         $(item).on("click", function(e) {
-            console.log(`${item}-active`);
-            $(this).siblings().data().fadeOut();
+            // console.log(`${item}-active`);
+            // $(this).siblings().data().fadeOut();
+            console.log($('[data-modal=promo__new]'));
             // e.preventDefault();
-            // item.siblings().removeClass('{"data-modal"}');
+            // item.siblings().removeClass();
             // item.removeClass('{"data-modal"}');
         });
 
