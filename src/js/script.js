@@ -85,7 +85,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     function promoToggler(item, i) {
         $(item).on("click", function(e) {
-            console.log($('[data-modal=promo__new]'));
+            // console.log($('[data-modal=promo__new]'));
             $(this).siblings().removeClass('header__nav-item-active');
             $('.promo').children().removeClass("promo__modal-active");
             $('.header__nav').children().eq(i).addClass('header__nav-item-active');
