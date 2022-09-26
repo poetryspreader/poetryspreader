@@ -32,8 +32,8 @@ window.addEventListener("DOMContentLoaded", function() {
             });
         },5000);
         setTimeout(logoBoxAnimation,10000);
-        }
-        logoBoxAnimation();
+    }
+    logoBoxAnimation();
     
     
     // ? logo width hover
