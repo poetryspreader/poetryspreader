@@ -94,8 +94,7 @@ window.addEventListener("DOMContentLoaded", function() {
     promoToggler('[data-modal=promo__new]', 0);
     promoToggler('[data-modal=promo__photos]', 1);
     promoToggler('[data-modal=promo__web]', 2);
-    promoToggler('[data-modal=promo__contacts]', 3);
-
+    promoToggler('[data-modal=promo__forms]', 3);
 
     // * BUTTONS
 
