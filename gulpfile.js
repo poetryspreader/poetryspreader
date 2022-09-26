@@ -1,13 +1,16 @@
-const gulp        = require('gulp');
-const browserSync = require('browser-sync');
-const sass        = require('gulp-sass')(require('sass'));
-const rename       = require('gulp-rename');
-const autoprefixer = require('gulp-autoprefixer');
-const GulpCleanCss = require('gulp-clean-css');
+import pkg from 'gulp';
+const { task, src, dest, watch, parallel } = pkg;
+import { init, stream, reload } from 'browser-sync';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass( dartSass );
+import rename from 'gulp-rename';
+import autoprefixer from 'gulp-autoprefixer';
+import GulpCleanCss from 'gulp-clean-css';
 
 // Static server
-gulp.task('server', function() {
-    browserSync.init({
+task('server', function() {
+    init({
         server: {
             baseDir: "src"
         },
@@ -15,8 +18,8 @@ gulp.task('server', function() {
     });
 });
 
-gulp.task('styles', function() {
-    return gulp.src("src/sass/**/*.+(scss|sass)")
+task('styles', function() {
+    return src("src/sass/**/*.+(scss|sass)")
             .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
             .pipe(rename({
                 prefix: "",
@@ -24,14 +27,14 @@ gulp.task('styles', function() {
               }))
             .pipe(autoprefixer())
             .pipe(GulpCleanCss({compatibility: 'ie8'}))
-            .pipe(gulp.dest("src/css"))
-            .pipe(browserSync.stream());
+            .pipe(dest("src/css"))
+            .pipe(stream());
 });
 
-gulp.task('watch', function() {
-    gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel('styles'));
-    gulp.watch("src/*.html").on("change", browserSync.reload);
-    gulp.watch("src/js/script.js").on("change", browserSync.reload);
+task('watch', function() {
+    watch("src/sass/**/*.+(scss|sass)", parallel('styles'));
+    watch("src/*.html").on("change", reload);
+    watch("src/js/script.js").on("change", reload);
 });
 
-gulp.task('default', gulp.parallel('watch','server','styles'));
+task('default', parallel('watch','server','styles'));
