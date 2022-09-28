@@ -38,7 +38,11 @@ window.addEventListener("DOMContentLoaded", function() {
     
     // ? logo width hover
     function widthHover() {
-        logoBox.classList.remove('logo__barcode-widthHover');
+        logoText.forEach((large) => {
+            large.classList.remove('logo__barcode-widthHover');
+        });
+
+        // logoBox.classList.remove('logo__barcode-widthHover');
         logoBox.addEventListener('mouseover', function(){
             logoText.forEach((large) => {
                 large.classList.add('logo__barcode-widthHover');
@@ -52,6 +56,7 @@ window.addEventListener("DOMContentLoaded", function() {
     }
     widthHover();
     
+
 
     // change randomly and directly rgb numbers
     // function test() {
@@ -85,12 +90,10 @@ window.addEventListener("DOMContentLoaded", function() {
 
     function promoToggler(item, i) {
         $(item).on("click", function(e) {
-            // console.log($('[data-modal=promo__new]'));
             $(this).siblings().removeClass('header__nav-item-active');
             $('.promo').children().removeClass("promo__modal-active");
             $('.header__nav').children().eq(i).addClass('header__nav-item-active');
             $('.promo').children().eq(i).addClass('promo__modal-active');
-
         });
     }
     promoToggler('[data-modal=promo__new]', 0);
@@ -129,7 +132,10 @@ window.addEventListener("DOMContentLoaded", function() {
             formRemoveError(input);
 
             if(input.classList.contains('_email')) {
-
+                if(emailTest(input)){
+                    formAddError(input);
+                    error++;
+                }
             }
         }
     }

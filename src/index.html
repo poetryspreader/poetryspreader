@@ -21,7 +21,7 @@
 <section class="header">
     <div class="logo">
         <div class="logo__box logo__box-widthHover">
-            <span class="logo__barcode-wrapper ">
+            <span class="logo__barcode-wrapper">
                 <span class="logo__barcode logo__barcode-colorSwipe">i</span>
                 <span class="logo__barcode logo__barcode-colorSwipe">l</span>
                 <span class="logo__barcode logo__barcode-colorSwipe">j</span>
@@ -125,19 +125,68 @@
         <div id="form" class="form">
             <span class="form__tilda">~</span>
             <h1 class="form__title">Отправка данных на почту:</h1>
+            <!-- * NAME -->
             <div class="form__item">
                 <label for="formName" class="form__label">Имя*:</label>
                 <input id="formName" type="text" name="name" class="form__input _req">
             </div>
+            <!-- * EMAIL -->
             <div class="form__item">
                 <label for="formEmail" class="form__label">E-mail*</label>
-                <input id="formEmail" type="text" class="form__input _req _email"></div>
+                <input id="formEmail" type="text" class="form__input _req _email">
+            </div>
+            <!-- * RADIO -->
+            <div class="form__item">
+                <div class="form__label">Пол:</div>
+                <div class="options">
+                    <div class="options__item">
+                        <input id="formMale" checked type="radio" value="male" name="sex" class="options__input">
+                        <label for="formMale" class="options__label">Мужчина</label>
+                    </div>
+                </div>
+                <div class="options">
+                    <div class="options__item">
+                        <input id="formFemale"type="radio" value="female" name="sex" class="options__input">
+                        <label for="formFemale" class="options__label">Женщина</label>
+                    </div>
+                </div>
+            </div>
+            <!-- * MESSAGE -->
             <div class="form__item">
                 <label for="formMessage" class="form__label">
                     Сообщение:
                 </label>
                 <textarea name="massage" id="forMessage" class="form__input message _req"></textarea>
             </div>
+            <!-- * OPTIONS -->
+            <div class="form__item">
+                <div class="form__label">
+                    <select name="age" class="select">
+                        <option value="от 18 до 25" selected>Молодой</option>
+                        <option value="от 25 до 45">Старый</option>
+                        <option value="от 45">Супер стар</option>
+                    </select>
+                </div>
+            </div>
+            <!-- * FILE -->
+            <div class="form__item">
+                <div class="form__label">Прикрепить фото</div>
+                <div class="file">
+                    <div class="file__item">
+                        <input type="file" if="formImage" accept=".jpg, .png, .gif" name="image" class="file__input">
+                        <div class="file__button">Выбрать</div>
+                    </div>
+                    <div class="file__preview"></div>
+                </div>
+            </div>
+            <!-- * CHECKBOX -->
+            <div class="form__item">
+                <div class="checkbox">
+                    <input type="checkbox" name="agreement" class="checkbox__input">
+                    <label for="formAgreement" class="form__label"><span>Я даю своё согласие на обработку персональных данных в соответствии с <a href="">Условиями</a>*</span></label>
+                </div>
+            </div>
+            <!-- * BUTTON -->
             <div class="form__button">отправить</div>
         </div>
     </div>
