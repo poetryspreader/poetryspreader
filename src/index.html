@@ -122,18 +122,21 @@
 
     <!-- ? FORM -> EMAIL -->
     <div class="promo__modal">
-        <div class="form">
+        <div id="form" class="form">
             <span class="form__tilda">~</span>
             <h1 class="form__title">Отправка данных на почту:</h1>
             <div class="form__item">
-                <label for="forName">Имя*:</label>
-                <input type="text" name="name" class="form__input">
+                <label for="formName" class="form__label">Имя*:</label>
+                <input id="formName" type="text" name="name" class="form__input _req">
             </div>
-            <div class="forms__item">
+            <div class="form__item">
+                <label for="formEmail" class="form__label">E-mail*</label>
+                <input id="formEmail" type="text" class="form__input _req _email"></div>
+            <div class="form__item">
                 <label for="formMessage" class="form__label">
                     Сообщение:
                 </label>
-                <textarea name="massage" id="forMessage" class="form__input"></textarea>
+                <textarea name="massage" id="forMessage" class="form__input message _req"></textarea>
             </div>
             <div class="form__button">отправить</div>
         </div>

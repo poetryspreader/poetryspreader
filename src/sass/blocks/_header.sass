@@ -1,28 +1,37 @@
 .header
     &__nav-wrapper
         display: flex
-        justify-content: space-between
+        justify-content: center
         align-items: center 
         font-family: 'Zen Kurenaido', sans-serif
         font-size: 20px  
     &__nav
-        text-decoration: none
         display: flex
+        padding-inline-start: 0px
+        margin: 1px 0
         &-language
-            text-decoration: none
             @include header_nav_greyOutline
             @include header_nav_hover
         li
-            margin-right: 30px
             list-style-type: none
-            transition: 0.2s
+            line-height: 1.2
             @include header_nav_greyOutline
             @include header_nav_hover
+            a
+                text-decoration: none
+                color: black
         &-item 
+            transition: 0.4s
             text-decoration: none
             color: black
+            margin-right: 3px
             &:hover
                 color: black
+            &-active
+                @include header_nav_greyOutline
+                background-color: rgb(245, 245, 245)
+            &:last-child
+                margin-right: 0px
         &-login
             text-decoration: none
             margin-right: 30px
