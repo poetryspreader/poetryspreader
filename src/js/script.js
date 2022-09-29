@@ -111,7 +111,7 @@ window.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // * FORM
+    // * FORM - VALIDATION
 
     const form = document.getElementById('form');
     $(".form").addEventListener('submit',formSend);
