@@ -6,15 +6,16 @@
         display: none
         &-active
             display: flex
-            flex-wrap: wrap
-            width: 100%
             justify-content: center
-        &-item
-            width: 33%   
-            img
-                display: block
-                margin: 0 auto
-                border-radius: 3px
-                width: 100%
-                height: auto
-                animation: inflate-left 4s linear infinite
+
+.new
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    &__item
+        width: 33%   
+        img
+            border-radius: 3px
+            width: 100%
+            animation: inflate-left 4s linear infinite

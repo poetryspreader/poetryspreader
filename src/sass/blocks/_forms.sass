@@ -1,12 +1,12 @@
+// ? FORM
 .form
     max-width: 550px
-    display: flex
-    justify-content: center
-    flex-direction: column
+    margin: 0 auto
     padding: 15px 0
     & *
         outline: none
     &__tilda
+        display: block
         text-align: center
         font-size: 90px
         line-height: 0.3
@@ -18,9 +18,9 @@
         font-size: 40px
     &__item
         margin-bottom: 20px
+        // display: flex
     &__label
         font-size: 18px
-        display: block
         margin: 0 0 5px 0
     &__input
         width: 100%
@@ -35,25 +35,20 @@
         min-height: 100px
         padding: 20px
     &__button
+        margin: 50px auto
         display: flex
         justify-content: center
         align-items: center
-        padding: 20px 0
-        min-height: 30px
-        width: 100%
+        padding: 15px 0
+        width: 70%
         background-color: #47b9cf
         color: white
         font-size: 16px
-        line-height: 0
         font-weight: 700
         cursor: pointer
         border-radius: 10px
-        margin-top: 15px
         box-shadow: 0 4px 0 #23525c
-        position: relative
-        top: 0
         transition: 0.3s
-        margin-bottom: 30px
         &:hover
             background-color: #3e808f
         &:active 
@@ -61,7 +56,6 @@
             box-shadow: none
     
 .options
-    &__item
     &__input
         display: none
         &:checked + .options__label::after
@@ -72,34 +66,90 @@
         font-size: 16px
         line-height: 150%
         align-items: center
+        cursor: pointer
         &::before
             content: ""
             flex: 0 0 18px // ! не используем width, а то сожмутся кнопки
             height: 18px
-            background-color: #57807c
+            border: 2px solid #000000bb
             border-radius: 50%
             margin-right: 10px
         &::after
             content: ""
-            top: 5px
-            left: 2px
+            top: 8px
+            left: 5px
             position: absolute
-            width: 14px
-            height: 14px
-            background-color: white
+            width: 8px
+            height: 8px
+            background-color: #000000bb
             border-radius: 50%
             transform: scale(0)
             transition: 0.5s ease 0s
 
-.select
-
 .file
-
-    &__item
+    &__item 
+        position: relative
     &__input
-    &__button
+        position: absolute
+        top: 0
+        left: 0
+        width: 100px
+        height: 100%
+        opacity: 0
+        font-size: 0
+        cursor: pointer
+    &__button 
+        display: inline-flex
+        height: 30px
+        border-radius: 30px
+        justify-content: center
+        align-items: center
+        background-color: #77608d
+        padding: 0px 20px
+        color: white
     &__preview
-    
+        display: inline-block
+        padding: 10px 0 0 0 
+        max-width: 100px
+        img
+            max-width: 100%
+
+.checkbox
+    &__input 
+        position: absolute
+        left: 0
+        top: 0
+        display: none
+        &:checked + .checkbox__label::after
+            transform: scale(1)
+    &__label
+        cursor: pointer
+        position: relative
+        font-size: 16px
+        line-height: 140%
+        display: inline-flex
+        align-items: center
+        &::before
+           content: ""
+           align-self: flex-start
+           margin: 0 10px 0 0
+           flex: 0 0 22px
+           height: 22px
+           background-color: #ddd
+           border-radius: 4px
+        &::after
+            content: ""
+            width: 14px
+            height: 14px
+            position: absolute
+            top: 4px
+            left: 4px
+            background-color: #000000bb
+            border-radius: 4px
+            transform: scale(0)
+            
+
+// ? KEYFRAMES
 @keyframes tilda
     0%
         transform: rotateY(40deg)
