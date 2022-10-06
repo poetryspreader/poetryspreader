@@ -1,18 +1,16 @@
 .header
     &__nav
         display: flex
-        overflow-x: auto
         padding-inline-start: 0px
         margin: 10px 0
+        white-space: nowrap
         &-scroll-container
             width: 100%
-            overflow: hidden
+            overflow-x: auto
             height: 50px
         &-wrapper
             display: flex
             justify-content: center
-            align-items: center 
-            font-family: 'Zen Kurenaido', sans-serif
             overflow: hidden
         &-language
             @include header_nav_greyOutline
